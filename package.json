@@ -1,0 +1,48 @@
+{
+    "name": "@neil-lobo/notifications-client",
+    "version": "1.0.0",
+    "description": "SDK to interact with notifications service",
+    "main": "out/index.js",
+    "types": "out/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "lint": "eslint .",
+        "lint:watch": "nodemon -e ts,json --exec eslint .",
+        "lint:fix": "eslint --fix .",
+        "format": "prettier . -w",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm run lint",
+        "preversion": "npm run lint"
+    },
+    "files": [
+        "out/**/*"
+    ],
+    "keywords": [
+        "notifications"
+    ],
+    "author": "Neil Lobo",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jsonwebtoken": "^9.0.2",
+        "@typescript-eslint/eslint-plugin": "^5.59.11",
+        "eslint": "^8.43.0",
+        "nodemon": "^2.0.22",
+        "prettier": "^2.8.8",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.1.3"
+    },
+    "dependencies": {
+        "jsonwebtoken": "^9.0.0"
+    },
+    "directories": {
+        "lib": "lib"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/neil-lobo/notifications-client.git"
+    },
+    "bugs": {
+        "url": "https://github.com/neil-lobo/notifications-client/issues"
+    },
+    "homepage": "https://github.com/neil-lobo/notifications-client#readme"
+}
