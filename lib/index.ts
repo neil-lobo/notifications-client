@@ -37,7 +37,7 @@ export class NotificationsClient {
         const res = await fetch(new URL("notify", this.url), {
             method: "POST",
             headers: {
-                authorization: this.token,
+                authorization: `Bearer ${this.token}`,
                 "content-type": "application/json",
             },
             body: JSON.stringify({
@@ -51,7 +51,7 @@ export class NotificationsClient {
     async getConnections() {
         const res = await fetch(new URL("connections", this.url), {
             headers: {
-                authorization: this.token,
+                authorization: `Bearer ${this.token}`,
             },
         });
         return res;
